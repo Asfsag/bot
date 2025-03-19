@@ -44,11 +44,14 @@ def get_menu_keyboard():
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Отправляем фото (замените PHOTO_FILE_ID на реальный file_id)
     await update.message.reply_photo(
-        photo="AgACAgIAAxkBAAPTZ9VnGlYEEIgOvqiFUR3-IM35fDUAAinvMRvLgrFKGVZHkEe2N3YBAAMCAAN5AAM2BA",
+        photo="AgACAgIAAxkBAAIC82faxc9Y43XWYLdOGiCgDQIubIjsAAKV8TEbMKjZSjAR3ODdTMlhAQADAgADeQADNgQ",
         caption=(
             'Добро пожаловать на мою выставку "СЧАСТЬЕ" в музее современного искусства "Артмуза".\n\n'
             'Я записала этот аудио-гид в дополнение к экспозиции, чтобы вы могли почувствовать и понять моё искусство чуточку лучше❤️\n\n'
-            'Тут вы найдёте рассказы почти ко всем картинам, которые представлены на выставке.'
+            'Тут вы найдёте рассказы почти ко всем картинам, которые представлены на выставке.\n\n'
+            'Тут вы найдёте рассказы почти ко всем картинам, которые представлены на выставке.\n\n'
+            'Тут вы найдёте рассказы почти ко всем картинам, которые представлены на выставке.\n\n'
+            'Тут вы найдёте рассказы почти ко всем картинам, которые представлены на выставке.\n\n'
         )
     )
 
@@ -64,7 +67,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     # Показываем меню с разделами
     await update.message.reply_text(
-        "Выберите раздел:",
+        "",
         reply_markup=get_menu_keyboard()
     )
 
@@ -82,7 +85,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             )
         # Показываем меню снова после отправки аудио
         await update.message.reply_text(
-            "Выберите раздел:",
+            "",
             reply_markup=get_menu_keyboard()
         )
         return
